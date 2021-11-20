@@ -1,0 +1,31 @@
+.dd-statistic {
+  &-title {
+    margin-bottom: 4px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+  }
+
+  &-content {
+    color: #000;
+    font-size: 24px;
+    &-value {
+      &-decimal {
+        font-size: 16px;
+      }
+    }
+
+    &-prefix,
+    &-suffix {
+      display: inline-block;
+    }
+
+    &-prefix {
+      margin-right: 4px;
+    }
+
+    &-suffix {
+      margin-left: 4px;
+      font-size: 16px;
+    }
+  }
+}

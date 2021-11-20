@@ -1,0 +1,81 @@
+{
+  "name": "element-pro",
+  "version": "0.1.0",
+  "description": "基于 Element-UI 的拓展组件库",
+  "main": "lib/element-pro.common.js",
+  "files": [
+    "lib",
+    "packages",
+    "src",
+    "types"
+  ],
+  "keyword": [
+    "element",
+    "vue",
+    "components"
+  ],
+  "author": "MarsXH.Chang",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "new:comp": "node build/bin/new-comp.js",
+    "new:docs": "node build/bin/new-docs.js",
+    "new:exam": "node build/bin/new-exam.js",
+    "new": "yarn new:docs & yarn new:exam",
+    "serve": "vue-cli-service serve",
+    "theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js",
+    "lib": "yarn theme && vue-cli-service build",
+    "docs": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js"
+  },
+  "dependencies": {
+    "@interactjs/actions": "^1.10.2",
+    "@interactjs/auto-start": "^1.10.2",
+    "@interactjs/dev-tools": "^1.10.2",
+    "@interactjs/interactjs": "^1.10.2",
+    "@interactjs/modifiers": "^1.10.2",
+    "async-validator": "^3.5.2",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.3",
+    "element-resize-detector": "^1.2.3",
+    "element-ui": "^2.15.4",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "throttle-debounce": "^1.0.1",
+    "vue": "^2.5.21",
+    "vue-router": "^3.5.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "classnames": "^2.3.1",
+    "file-save": "^0.2.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2",
+    "json-loader": "^0.5.7",
+    "json-templater": "^1.0.4",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "uppercamelcase": "^1.1.0",
+    "vue-template-compiler": "^2.6.12",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-demo-container": "^0.2.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "typings": "types/index.d.ts"
+}

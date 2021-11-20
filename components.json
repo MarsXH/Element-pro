@@ -1,0 +1,15 @@
+{
+  "input-number": "./packages/input-number/index.js",
+  "table": "./packages/table/index.js",
+  "statistic": "./packages/statistic/index.js",
+  "form": "./packages/form/index.js",
+  "aside": "./packages/aside/index.js",
+  "drawer": "./packages/drawer/index.js",
+  "full-screen": "./packages/full-screen/index.js",
+  "timeline": "./packages/timeline/index.js",
+  "select": "./packages/select/index.js",
+  "grid-layout": "./packages/grid-layout/index.js",
+  "form-item": "./packages/form-item/index.js",
+  "search-form": "./packages/search-form/index.js",
+  "crud": "./packages/crud/index.js"
+}

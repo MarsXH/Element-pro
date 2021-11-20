@@ -1,0 +1,206 @@
+
+/*
+ * red 红色
+*/
+.text-red {
+	color: #F44336;
+}
+.bg-red {
+	background-color: #F44336;
+}
+$red-list:
+(light-5, #FFEBEE), (light-4, #FFCDD2), (light-3, #EF9A9A), (light-2, #E57373), (light-1, #EF5350),
+(darken-1, #E53935), (darken-2, #D32F2F), (darken-3, #C62828), (darken-4, #B71C1C),
+(accent-1, #FF8A80), (accent-2, #FF5252), (accent-3, #FF1744), (accent-4, #D50000);
+@each $name, $red in $red-list {
+	.text-red-#{$name} {
+		color: $red;
+	}
+	.bg-red-#{$name} {
+		background-color: $red;
+	}
+}
+
+/*
+ * pink 粉色
+*/
+.text-pink {
+	color: #E91E63;
+}
+.bg-pink {
+	background-color: #E91E63;
+}
+$pink-list:
+(light-5, #FCE4EC), (light-4, #F8BBD0), (light-3, #F48FB1), (light-2, #F06292), (light-1, #EC407A),
+(darken-1, #D81B60), (darken-2, #C2185B), (darken-3, #AD1457), (darken-4, #880E4F),
+(accent-1, #FF80AB), (accent-2, #FF4081), (accent-3, #F50057), (accent-4, #C51162);
+@each $name, $pink in $pink-list {
+	.text-pink-#{$name} {
+		color: $pink;
+	}
+	.bg-pink-#{$name} {
+		background-color: $pink;
+	}
+}
+
+/*
+ * purple 紫色
+*/
+.text-purple {
+	color: #9C27B0;
+}
+.bg-purple {
+	background-color: #9C27B0;
+}
+$purple-list:
+(light-5, #F3E5F5), (light-4, #E1BEE7), (light-3, #CE93D8), (light-2, #BA68C8), (light-1, #AB47BC),
+(darken-1, #8E24AA), (darken-2, #7B1FA2), (darken-3, #6A1B9A), (darken-4, #4A148C),
+(accent-1, #EA80FC), (accent-2, #E040FB), (accent-3, #D500F9), (accent-4, #AA00FF);
+@each $name, $purple in $purple-list {
+	.text-purple-#{$name} {
+		color: $purple;
+	}
+	.bg-purple-#{$name} {
+		background-color: $purple;
+	}
+}
+
+/*
+ * purple 紫色
+*/
+.text-deep-purple {
+	color: #673AB7;
+}
+.bg-deep-purple {
+	background-color: #673AB7;
+}
+$deep-purple-list:
+(light-5, #EDE7F6), (light-4, #D1C4E9), (light-3, #B39DDB), (light-2, #9575CD), (light-1, #7E57C2),
+(darken-1, #5E35B1), (darken-2, #512DA8), (darken-3, #4527A0), (darken-4, #311B92),
+(accent-1, #B388FF), (accent-2, #7C4DFF), (accent-3, #651FFF), (accent-4, #6200EA);
+@each $name, $deepPurple in $deep-purple-list {
+	.text-deep-purple-#{$name} {
+		color: $deepPurple;
+	}
+	.bg-deep-purple-#{$name} {
+		background-color: $deepPurple;
+	}
+}
+
+/*
+ * indigo 靛蓝色
+*/
+.text-indigo {
+	color: #3F51B5;
+}
+.bg-indigo {
+	background-color: #3F51B5;
+}
+$indigo-list:
+(light-5, #E8EAF6), (light-4, #C5CAE9), (light-3, #9FA8DA), (light-2, #7986CB), (light-1, #5C6BC0),
+(darken-1, #3949AB), (darken-2, #303F9F), (darken-3, #283593), (darken-4, #1A237E),
+(accent-1, #8C9EFF), (accent-2, #536DFE), (accent-3, #3D5AFE), (accent-4, #304FFE);
+@each $name, $indigo in $indigo-list {
+	.text-indigo-#{$name} {
+		color: $indigo;
+	}
+	.bg-indigo-#{$name} {
+		background-color: $indigo;
+	}
+}
+
+/*
+ * blue 蓝色
+*/
+.text-blue {
+	color: #2196F3;
+}
+.bg-blue {
+	background-color: #2196F3;
+}
+$blue-list:
+(light-5, #E3F2FD), (light-4, #BBDEFB), (light-3, #90CAF9), (light-2, #64B5F6), (light-1, #42A5F5),
+(darken-1, #1E88E5), (darken-2, #1976D2), (darken-3, #1565C0), (darken-4, #0D47A1),
+(accent-1, #82B1FF), (accent-2, #448AFF), (accent-3, #2979FF), (accent-4, #2962FF);
+@each $name, $blue in $blue-list {
+	.text-blue-#{$name} {
+		color: $blue;
+	}
+	.bg-blue-#{$name} {
+		background-color: $blue;
+	}
+}
+
+/*
+ * light-blue 蓝色
+*/
+.text-light-blue {
+	color: #03A9F4;
+}
+.bg-light-blue {
+	background-color: #03A9F4;
+}
+$light-blue-list:
+(light-5, #E1F5FE), (light-4, #B3E5FC), (light-3, #81D4FA), (light-2, #4FC3F7), (light-1, #29B6F6),
+(darken-1, #039BE5), (darken-2, #0288D1), (darken-3, #0277BD), (darken-4, #01579B),
+(accent-1, #80D8FF), (accent-2, #40C4FF), (accent-3, #00B0FF), (accent-4, #0091EA);
+@each $name, $lightBlue in $light-blue-list {
+	.text-light-blue-#{$name} {
+		color: $lightBlue;
+	}
+	.bg-light-blue-#{$name} {
+		background-color: $lightBlue;
+	}
+}
+
+/*
+ * cyan 蓝色
+*/
+.text-blue {
+	color: #2196F3;
+}
+.bg-blue {
+	background-color: #2196F3;
+}
+$blue-list:
+(light-5, #E3F2FD), (light-4, #BBDEFB), (light-3, #90CAF9), (light-2, #64B5F6), (light-1, #42A5F5),
+(darken-1, #1E88E5), (darken-2, #1976D2), (darken-3, #1565C0), (darken-4, #0D47A1),
+(accent-1, #82B1FF), (accent-2, #448AFF), (accent-3, #2979FF), (accent-4, #2962FF);
+@each $name, $blue in $blue-list {
+	.text-blue-#{$name} {
+		color: $blue;
+	}
+	.bg-blue-#{$name} {
+		background-color: $blue;
+	}
+}
+
+// cyan
+// cyan
+// #00BCD4
+// cyan lighten-5
+// #E0F7FA
+// cyan lighten-4
+// #B2EBF2
+// cyan lighten-3
+// #80DEEA
+// cyan lighten-2
+// #4DD0E1
+// cyan lighten-1
+// #26C6DA
+// cyan darken-1
+// #00ACC1
+// cyan darken-2
+// #0097A7
+// cyan darken-3
+// #00838F
+// cyan darken-4
+// #006064
+// cyan accent-1
+// #84FFFF
+// cyan accent-2
+// #18FFFF
+// cyan accent-3
+// #00E5FF
+// cyan accent-4
+// #00B8D4

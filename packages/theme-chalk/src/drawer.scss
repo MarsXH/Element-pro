@@ -1,0 +1,36 @@
+.el-drawer__body {
+  height: 100%;
+}
+.dd-drawer-move-line {
+  position: absolute;
+  opacity: 0;
+  z-index: 999;
+  &__btt {
+    cursor: ns-resize;
+    height: 6px;
+    width: 100%;
+    left: 0;
+    top: -3px;
+  }
+  &__ttb {
+    cursor: ns-resize;
+    height: 6px;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+  }
+  &__rtl {
+    cursor: ew-resize;
+    height: 100%;
+    width: 6px;
+    top: 0;
+    left: -3px;
+  }
+  &__ltr {
+    cursor: ew-resize;
+    height: 100%;
+    width: 6px;
+    top: 0;
+    right: -3px;
+  }
+}
