@@ -1,6 +1,6 @@
 # ElementPro
 
-一个基于 ElementUI 的拓展组件库(0.3.0 以上版本支持 TS)。
+一个基于 ElementUI 的拓展组件库。
 
 ## 说明文档
 
