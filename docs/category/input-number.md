@@ -14,7 +14,7 @@ title: InputNumber 计数器
 
 ```html
 <template>
-  <div class="dd-input-number">
+  <div class="ep-input-number">
     <h5>自定义头部和尾部</h5>
     <ep-input-number v-model="num" :controls="false">
       <span slot="prefix">￥</span>
@@ -93,10 +93,10 @@ title: InputNumber 计数器
 </script>
 
 <style>
-  .dd-input-number .el-input {
+  .ep-input-number .el-input {
     width: 320px;
   }
-  .dd-input-number .el-select .el-input {
+  .ep-input-number .el-select .el-input {
     width: 100px;
   }
 </style>

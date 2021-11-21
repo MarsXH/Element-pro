@@ -1,5 +1,5 @@
 <template>
-  <div ref="item" class="dd-grid-item" :class="classObj" :style="style">
+  <div ref="item" class="ep-grid-item" :class="classObj" :style="style">
     <slot></slot>
     <span
       v-if="resizableAndNotStatic"
@@ -314,7 +314,7 @@ export default {
   computed: {
     classObj() {
       return {
-        "dd-resizable": this.resizableAndNotStatic,
+        "ep-resizable": this.resizableAndNotStatic,
         static: this.static,
         resizing: this.isResizing,
         "vue-draggable-dragging": this.isDragging,
@@ -338,9 +338,9 @@ export default {
     },
     resizableHandleClass() {
       if (this.renderRtl) {
-        return "dd-resizable-rb-handle dd-rtl-resizable-handle";
+        return "ep-resizable-rb-handle ep-rtl-resizable-handle";
       } else {
-        return "dd-resizable-rb-handle";
+        return "ep-resizable-rb-handle";
       }
     },
   },

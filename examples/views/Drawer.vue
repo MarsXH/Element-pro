@@ -12,7 +12,7 @@
       </div>
     </el-card>
     <ep-drawer
-      ref="ddDrawer"
+      ref="epDrawer"
       title="我是标题"
       :visible.sync="drawer"
       :direction="direction"
@@ -39,7 +39,7 @@ export default {
       this.drawer = true;
     },
     closeDrawer() {
-      this.$refs.ddDrawer.closeDrawer();
+      this.$refs.epDrawer.closeDrawer();
     },
   },
 };

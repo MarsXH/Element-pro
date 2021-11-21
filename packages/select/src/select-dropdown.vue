@@ -7,7 +7,7 @@
     <!-- 自定义拓展（优先） -->
     <div
       v-if="extendPosition === 'top' && $slots.extend"
-      class="dd-select-dropdown-extend dd-select-dropdown-extend-prefix"
+      class="ep-select-dropdown-extend ep-select-dropdown-extend-prefix"
     >
       <slot name="extend"></slot>
     </div>
@@ -18,7 +18,7 @@
           !$slots.extend &&
           (extendTextLeft || extendTextRight)
       "
-      class="dd-select-dropdown-extend dd-select-dropdown-extend-prefix dd-select-dropdown-extend-content"
+      class="ep-select-dropdown-extend ep-select-dropdown-extend-prefix ep-select-dropdown-extend-content"
     >
       <el-button
         style="float: left"
@@ -39,7 +39,7 @@
     <!-- 自定义拓展（优先） -->
     <div
       v-if="extendPosition === 'bottom' && $slots.extend"
-      class="dd-select-dropdown-extend dd-select-dropdown-extend-suffix"
+      class="ep-select-dropdown-extend ep-select-dropdown-extend-suffix"
     >
       <slot name="extend"></slot>
     </div>
@@ -50,7 +50,7 @@
           !$slots.extend &&
           (extendTextLeft || extendTextRight)
       "
-      class="dd-select-dropdown-extend dd-select-dropdown-extend-suffix dd-select-dropdown-extend-content"
+      class="ep-select-dropdown-extend ep-select-dropdown-extend-suffix ep-select-dropdown-extend-content"
     >
       <el-button
         style="float: left"

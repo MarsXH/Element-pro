@@ -30,14 +30,14 @@ export default {
 
     const dot = this.dot || this.$slots.dot;
     const itemClassName = classNames({
-      "dd-timeline-item": true,
-      "dd-timeline-item-pending": pending,
+      "ep-timeline-item": true,
+      "ep-timeline-item-pending": pending,
     });
 
     const dotClassName = classNames({
-      "dd-timeline-item-head": true,
-      "dd-timeline-item-head-custom": dot,
-      [`dd-timeline-item-head-${color}`]: true,
+      "ep-timeline-item-head": true,
+      "ep-timeline-item-head-custom": dot,
+      [`ep-timeline-item-head-${color}`]: true,
     });
     const liProps = {
       class: itemClassName,
@@ -45,7 +45,7 @@ export default {
     };
     return (
       <li {...liProps}>
-        <div class={`dd-timeline-item-tail`} />
+        <div class={`ep-timeline-item-tail`} />
         <div
           class={dotClassName}
           style={{
@@ -54,7 +54,7 @@ export default {
         >
           {dot}
         </div>
-        <div class={`dd-timeline-item-content`}>{this.$slots.default}</div>
+        <div class={`ep-timeline-item-content`}>{this.$slots.default}</div>
       </li>
     );
   },

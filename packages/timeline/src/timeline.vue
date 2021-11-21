@@ -35,10 +35,10 @@ export default {
     const pendingDot = pending || this.$slots.pendingDot;
     const pending = pending || this.$slots.pending;
     const pendingNode = typeof pending === "boolean" ? null : pending;
-    const classString = classNames("dd-timeline", {
-      [`dd-timeline-pending`]: !!pending,
-      [`dd-timeline-reverse`]: !!reverse,
-      [`dd-timeline-${mode}`]: !!mode,
+    const classString = classNames("ep-timeline", {
+      [`ep-timeline-pending`]: !!pending,
+      [`ep-timeline-reverse`]: !!reverse,
+      [`ep-timeline-${mode}`]: !!mode,
     });
     const children = filterEmpty(this.$slots.default);
 
@@ -58,22 +58,22 @@ export default {
     const getPositionCls = (ele, idx) => {
       const eleProps = getPropsData(ele);
       if (mode === "alternate") {
-        if (eleProps.position === "right") return `dd-timeline-item-right`;
-        if (eleProps.position === "left") return `dd-timeline-item-left`;
+        if (eleProps.position === "right") return `ep-timeline-item-right`;
+        if (eleProps.position === "left") return `ep-timeline-item-left`;
         return idx % 2 === 0
-          ? `dd-timeline-item-left`
-          : `dd-timeline-item-right`;
+          ? `ep-timeline-item-left`
+          : `ep-timeline-item-right`;
       }
-      if (mode === "left") return `dd-timeline-item-left`;
-      if (mode === "right") return `dd-timeline-item-right`;
-      if (eleProps.position === "right") return `dd-timeline-item-right`;
+      if (mode === "left") return `ep-timeline-item-left`;
+      if (mode === "right") return `ep-timeline-item-right`;
+      if (eleProps.position === "right") return `ep-timeline-item-right`;
       return "";
     };
 
     // Remove falsy items
     const truthyItems = timeLineItems.filter((item) => !!item);
     const itemsCount = truthyItems.length;
-    const lastCls = `dd-timeline-item-last`;
+    const lastCls = `ep-timeline-item-last`;
     const items = truthyItems.map((ele, idx) => {
       const pendingClass = idx === itemsCount - 2 ? lastCls : "";
       const readyClass = idx === itemsCount - 1 ? lastCls : "";

@@ -1,10 +1,10 @@
-### dd-drawer（基于 el-drawer）[返回](../#组件说明)
+### ep-drawer（基于 el-drawer）[返回](../#组件说明)
 
 新增了可自由拖动尺寸
 
-#### dd-drawer：支持 el-drawer 组件全部 api，新增 3 个 api
+#### ep-drawer：支持 el-drawer 组件全部 api，新增 3 个 api
 
-dd-drawer Attributes
+ep-drawer Attributes
 
 | 参数    | 说明               | 类型         | 默认值 |
 | :------ | :----------------- | :----------- | ------ |
@@ -15,7 +15,7 @@ dd-drawer Attributes
 ```javascript
 <template>
   <ep-drawer
-    ref="ddDrawer"
+    ref="epDrawer"
     size="65%"
     maxSize="100%"
     minSize="20%"

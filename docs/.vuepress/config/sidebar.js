@@ -24,9 +24,9 @@ module.exports = {
         "statistic",
         "select",
         "timeline",
-        "form-item",
-        "search-form",
-        "crud"
+        // "form-item",
+        // "search-form",
+        // "crud"
       ]
     },
     // {
@@ -47,6 +47,14 @@ module.exports = {
     //     "color"
     //   ]
     // },
+    {
+      "title": "快查",
+      "collapsable": false,
+      "sidebarDepth": 0,
+      "children": [
+        "quickQuery",
+      ]
+    },
     {
       "title": "样式",
       "collapsable": false,

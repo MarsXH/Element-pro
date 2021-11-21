@@ -1,8 +1,8 @@
-### dd-timeline [返回](../#组件说明)
+### ep-timeline [返回](../#组件说明)
 
 时间轴组件
 
-dd-timeline Attributes
+ep-timeline Attributes
 
 | 参数       | 说明                                         | 类型                       | 默认值 |
 | :--------- | :------------------------------------------- | :------------------------- | ------ |
@@ -10,7 +10,7 @@ dd-timeline Attributes
 | pendingDot | 当最后一个幽灵节点存在時，指定其时间图点     | string \| slot             |        |
 | mode       | 通过设置 mode 可以改变时间轴和内容的相对位置 | left \| alternate \| right |        |
 
-dd-timeline-item Attributes
+ep-timeline-item Attributes
 
 | 参数     | 说明                                          | 类型           | 默认值 |
 | :------- | :-------------------------------------------- | :------------- | ------ |

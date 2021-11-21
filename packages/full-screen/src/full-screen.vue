@@ -1,6 +1,6 @@
 <template>
-  <div ref="ddFullScreen" class="dd-full-screen">
-    <div v-if="show && showClose" class="dd-full-screen__header">
+  <div ref="epFullScreen" class="ep-full-screen">
+    <div v-if="show && showClose" class="ep-full-screen__header">
       <i class="el-icon-close" @click="closeFullScreen"></i>
     </div>
     <slot></slot>
@@ -56,7 +56,7 @@ export default {
       this.$emit("close");
     },
     openFullScreen() {
-      const element = this.$refs.ddFullScreen;
+      const element = this.$refs.epFullScreen;
       showFullScreen(element);
     },
     closeFullScreen() {

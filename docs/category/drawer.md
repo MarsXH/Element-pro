@@ -22,7 +22,7 @@ title: Drawer 抽屉
       <el-button type="primary" @click="openDrawer('btt')">下面打开</el-button>
     </div>
     <ep-drawer
-      ref="ddDrawer"
+      ref="epDrawer"
       title="我是标题"
       :visible.sync="drawer"
       :direction="direction"
@@ -51,7 +51,7 @@ title: Drawer 抽屉
         this.drawer = true;
       },
       closeDrawer() {
-        this.$refs.ddDrawer.closeDrawer();
+        this.$refs.epDrawer.closeDrawer();
       },
     },
   };

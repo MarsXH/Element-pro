@@ -48,7 +48,7 @@ export default {
 
   render() {
     const { value = 0, valueStyle, valueRender } = this.$props;
-    const prefixCls = "dd-statistic";
+    const prefixCls = "ep-statistic";
 
     const title = getComponentFromProp(this, "title");
     let prefix = getComponentFromProp(this, "prefix");

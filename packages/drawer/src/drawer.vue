@@ -149,7 +149,7 @@ export default {
           <i
             ref="line"
             slot="default"
-            class={"dd-drawer-move-line dd-drawer-move-line__" + this.direction}
+            class={"ep-drawer-move-line ep-drawer-move-line__" + this.direction}
             onMousedown={(e) => this.onMousedown(e)}
           ></i>
         ) : null}

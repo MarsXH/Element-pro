@@ -1,5 +1,5 @@
 <template>
-  <div class="dd-crud"></div>
+  <div class="ep-crud"></div>
 </template>
 
 <script>

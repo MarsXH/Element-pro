@@ -8,8 +8,8 @@ title: 快速上手
 
 ```javascript
 import Vue from "vue";
-import ElementPro from "@ddmc/element-pro";
-import "@ddmc/element-pro/lib/theme-chalk/index.css";
+import ElementPro from "element-pro-ui";
+import "element-pro-ui/lib/theme-chalk/index.css";
 import App from "./App.vue";
 
 Vue.use(ElementPro);
@@ -40,7 +40,7 @@ module.exports = {
     [
       "component",
       {
-        libraryName: "@ddmc/element-pro",
+        libraryName: "element-pro-ui",
         styleLibraryName: "theme-chalk",
       },
     ],
@@ -63,7 +63,7 @@ module.exports = {
     [
       "component",
       {
-        libraryName: "@ddmc/element-pro",
+        libraryName: "element-pro-ui",
         styleLibraryName: "theme-chalk",
       },
       "element-pro",
@@ -76,7 +76,7 @@ module.exports = {
 
 ```javascript
 import Vue from "vue";
-import { Aside, Drawer, Table, InputNumber } from "@ddmc/element-pro";
+import { Aside, Drawer, Table, InputNumber } from "element-pro-ui";
 import App from "./App.vue";
 
 Vue.component(Aside.name, Aside);

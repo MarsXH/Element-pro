@@ -13,7 +13,7 @@ export default {
     formRef: {
       type: String,
       default() {
-        return "ddForm";
+        return "epForm";
       },
     },
     config: {
@@ -226,7 +226,7 @@ export default {
           },
         },
         [
-          h("dd-form-item", {
+          h("ep-form-item", {
             props: {
               value,
               properties: item,

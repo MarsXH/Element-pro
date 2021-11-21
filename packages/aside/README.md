@@ -1,10 +1,10 @@
-### dd-aside（基于 el-aside）[返回](../#组件说明)
+### ep-aside（基于 el-aside）[返回](../#组件说明)
 
 新增了 aside 展开/收起动作，宽度可自由拖动
 
-#### dd-aside：支持 el-aside 组件全部 api，新增 5 个 api
+#### ep-aside：支持 el-aside 组件全部 api，新增 5 个 api
 
-dd-aside Attributes
+ep-aside Attributes
 
 | 参数     | 说明               | 类型         | 默认值 |
 | :------- | :----------------- | :----------- | ------ |

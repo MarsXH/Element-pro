@@ -17,7 +17,7 @@ module.exports = {
     smoothScroll: true,
     nav: require("./config/nav"),
     sidebar: require("./config/sidebar"),
-    repo: "https://git.ddxq.mobi/di/element-pro",
+    repo: "https://github.com/MarsXH/Element-pro",
     editLinks: false,
   },
   plugins: [

@@ -177,7 +177,7 @@ title: Statistic 数据统计
 
 ### StatisticCountdown Events
 
-|dd-statistic-countdown Events
+|ep-statistic-countdown Events
 
 | 事件名称 | 说明             | 回调参数   |
 | :------- | :--------------- | :--------- |

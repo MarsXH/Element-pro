@@ -159,7 +159,7 @@
 
 可以改变 `flex-wrap` 设置. 默认情况下, 这将修改 **x轴** 上的 flex 项目
 
-> **类名：`.align-self-{value}`**
+> **类名：`.flex-{value}`**
 
 该 value 属性的值是以下之一：
 - nowrap

@@ -1,10 +1,10 @@
-### dd-input-number（基于 el-input-number）[返回](../#组件说明)
+### ep-input-number（基于 el-input-number）[返回](../#组件说明)
 
 新增了可配置输入框头部、尾部的内容
 
 #### 支持 el-input-number 组件全部 api，新增 2 个 slot
 
-dd-input-number Slot
+ep-input-number Slot
 
 | name   | 说明                                     |
 | :----- | :--------------------------------------- |

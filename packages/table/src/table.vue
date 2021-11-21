@@ -4,7 +4,7 @@ import ElTable from "element-ui/lib/table";
 const methods = {};
 Object.keys(ElTable.methods).forEach((item) => {
   methods[item] = function (...args) {
-    this.$refs.ddtable[item](...args);
+    this.$refs.eptable[item](...args);
   };
 });
 
@@ -33,7 +33,7 @@ export default {
   watch: {
     data: function () {
       if (this.scrollToTop) {
-        this.$refs.ddtable.bodyWrapper.scrollTop = 0;
+        this.$refs.eptable.bodyWrapper.scrollTop = 0;
       }
     },
     columns: {
@@ -47,7 +47,7 @@ export default {
     },
   },
   mounted() {
-    this.nativeTable = this.$refs.ddtable;
+    this.nativeTable = this.$refs.eptable;
   },
   methods: Object.assign({}, methods, {
     renderColume(columns) {
@@ -147,7 +147,7 @@ export default {
     });
     const table = (
       <el-table
-        ref="ddtable"
+        ref="eptable"
         {...{ props, scopedSlots: { ...this.$scopedSlots } }}
         on={this.$listeners}
       >
@@ -172,23 +172,23 @@ export default {
     if (this.pagination) {
       if (this.pagination.position === "both") {
         return (
-          <div class="dd-table">
+          <div class="ep-table">
             {this.renderPagination(h)}
-            <div class="dd-table__wrapper">{table}</div>
+            <div class="ep-table__wrapper">{table}</div>
             {this.renderPagination(h)}
           </div>
         );
       } else if (this.pagination.position === "top") {
         return (
-          <div class="dd-table">
+          <div class="ep-table">
             {this.renderPagination(h)}
-            <div class="dd-table__wrapper">{table}</div>
+            <div class="ep-table__wrapper">{table}</div>
           </div>
         );
       } else {
         return (
-          <div class="dd-table">
-            <div class="dd-table__wrapper">{table}</div>
+          <div class="ep-table">
+            <div class="ep-table__wrapper">{table}</div>
             {this.renderPagination(h)}
           </div>
         );
@@ -196,7 +196,7 @@ export default {
     } else {
       return (
         <el-table
-          ref="ddtable"
+          ref="eptable"
           {...{ props, scopedSlots: { ...this.$scopedSlots } }}
           on={this.$listeners}
         >

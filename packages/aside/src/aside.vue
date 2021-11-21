@@ -7,7 +7,7 @@
     <i
       ref="line"
       v-if="drag"
-      class="dd-aside-move-line"
+      class="ep-aside-move-line"
       @mousedown="onMousedown"
     ></i>
     <slot></slot>
@@ -51,7 +51,7 @@ export default {
     };
   },
   created() {
-    this.id = "dd-aside-" + new Date().getTime();
+    this.id = "ep-aside-" + new Date().getTime();
   },
   mounted() {
     this.$nextTick(() => {

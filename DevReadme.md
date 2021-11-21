@@ -1,14 +1,17 @@
----
-title: 开发文档
----
+# ElementPro
 
-# 开发文档
+一个基于 ElementUI 的拓展组件库(0.3.0 以上版本支持 TS)。
 
-项目仓库地址：[https://github.com/MarsXH/Element-pro](https://github.com/MarsXH/Element-pro)
+## 说明文档
 
-内部 npm 包地址：[]()
+使用说明文档：
 
-## 分支说明
+## 开发文档
+
+项目仓库地址：https://github.com/MarsXH/Element-pro
+npm 包地址：
+
+### 分支说明
 
 **master** --主分支
 
@@ -18,7 +21,7 @@ title: 开发文档
 
 **futrue/xxx** --对应组件开发分支
 
-## 目录结构
+### 目录结构
 
 ```
 ├── build
@@ -60,11 +63,9 @@ title: 开发文档
 └── package.json
 ```
 
-## 组件开发
+### 组件开发
 
-### 创建新组件
-
-> 组件英文名单词间以 `-` 链接
+**创建新组件**
 
 ```bash
   yarn new:comp [组件英文名] [组件中文名]
@@ -137,7 +138,7 @@ export default Button;
   }
 ```
 
-### 创建组件调试页面
+**创建组件调试页面**
 
 ```bash
   yarn new:exam [组件英文名] [组件中文名]
@@ -172,7 +173,7 @@ export const pageRouterMap = [
   </script>
 ```
 
-### 组件调试
+**组件调试**
 
 组件调试阶段，已全局引入`packages`文件夹下面的所有组件
 
@@ -180,7 +181,7 @@ export const pageRouterMap = [
   yarn serve
 ```
 
-### 组件库打包
+**组件库打包**
 
 使用`lib`打包模式，打包后的文件结构需满足`按需加载`插件的要求，本组件库采用`babel-plugin-component`作为按需加载插件。
 
@@ -190,9 +191,9 @@ export const pageRouterMap = [
   yarn lib
 ```
 
-## 组件文档开发
+### 组件文档开发
 
-### 创建新组件文档
+**创建新组件文档**
 
 ```bash
   yarn new:docs [组件英文名] [组件中文名]
@@ -223,7 +224,7 @@ export const pageRouterMap = [
   # Button 按钮
 ```
 
-### 组件文档调试
+**组件文档调试**
 
 文档调试阶段，全局引入打包后的组件库`lib`，文档开发需先对组件进行打包。
 
@@ -231,7 +232,7 @@ export const pageRouterMap = [
   yarn docs
 ```
 
-### 组件文档打包
+**组件文档打包**
 
 打包到根目录下`dist`文件夹，可在内网运维平台发布。
 

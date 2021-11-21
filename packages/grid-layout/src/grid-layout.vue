@@ -1,8 +1,8 @@
 <template>
-  <div ref="item" class="dd-grid-layout" :style="mergedStyle">
+  <div ref="item" class="ep-grid-layout" :style="mergedStyle">
     <slot></slot>
     <ep-grid-item
-      class="dd-grid-placeholder"
+      class="ep-grid-placeholder"
       v-show="isDragging"
       :x="placeholder.x"
       :y="placeholder.y"

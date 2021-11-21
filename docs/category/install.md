@@ -7,11 +7,11 @@ title: 安装
 yarn 安装
 
 ```shell
-yarn add @ddmc/element-pro --registry http://npm.ddxq.mobi/
+yarn add element-pro-ui
 ```
 
 npm 安装
 
 ```shell
-npm install @ddmc/element-pro --registry http://npm.ddxq.mobi/
+npm install element-pro-ui
 ```

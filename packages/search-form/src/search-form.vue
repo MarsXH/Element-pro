@@ -1,5 +1,5 @@
 <template>
-  <div class="dd-search-form">
+  <div class="ep-search-form">
     <div class="search-container">
       <div class="search-wrapper">
         <div v-for="(item, index) in searchFormItems" :key="index" class="search-item">
