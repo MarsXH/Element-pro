@@ -6,7 +6,7 @@ title: 开发文档
 
 项目仓库地址：[https://github.com/MarsXH/Element-pro](https://github.com/MarsXH/Element-pro)
 
-内部 npm 包地址：[]()
+npm 包地址：[https://www.npmjs.com/package/element-pro-ui](https://www.npmjs.com/package/element-pro-ui)
 
 ## 分支说明
 
