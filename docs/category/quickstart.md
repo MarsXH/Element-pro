@@ -66,7 +66,7 @@ module.exports = {
         libraryName: "element-pro-ui",
         styleLibraryName: "theme-chalk",
       },
-      "element-pro",
+      "element-pro-ui",
     ],
   ],
 };

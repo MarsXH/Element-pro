@@ -1,4 +1,4 @@
-> 使用时只需引入 `element-pro/lib/theme-chalk/index.css`即可。
+> 使用时只需引入 `element-pro-ui/lib/theme-chalk/index.css`即可。
 
 # Quick Query 快查
 
