@@ -98,7 +98,7 @@ const tableData = [
   },
 ];
 export default {
-  name: "DdTableTemplate",
+  name: "EpTableTemplate",
   data() {
     return {
       columes,

@@ -1,7 +1,7 @@
 import { ElementUIComponent } from './component'
 
 /** GridLayout Component */
-export declare class DdGridLayout extends ElementUIComponent {
+export declare class EpGridLayout extends ElementUIComponent {
   autoSize: Boolean
   colNum: Number
   rowHeight: Number

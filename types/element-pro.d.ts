@@ -1,23 +1,23 @@
 import Vue from 'vue'
 import { ElementUIComponent, ElementUIComponentSize, ElementUIHorizontalAlignment } from './component'
 
-import { DdAside } from './aside'
-import { DdDrawer } from './drawer'
-import { DdForm } from './form'
-import { DdFullScreen } from './full-screen'
-import { DdInputNumber } from './input-number'
-import { DdStatisticCountdown } from './statistic-countdown'
-import { DdStatistic } from './statistic'
-import { DdTable } from './table'
-import { DdTimeline } from './timeline'
-import { DdTimelineItem } from './timeline-item'
-import { DdSelect } from './select'
-import { DdGridLayout } from './grid-layout'
-import { DdGridItem } from './grid-item'
-import { DdButton } from './button'
-import { DdFormItem } from './form-item'
-import { DdSearchForm } from './search-form'
-import { DdCrud } from './crud'
+import { EpAside } from './aside'
+import { EpDrawer } from './drawer'
+import { EpForm } from './form'
+import { EpFullScreen } from './full-screen'
+import { EpInputNumber } from './input-number'
+import { EpStatisticCountdown } from './statistic-countdown'
+import { EpStatistic } from './statistic'
+import { EpTable } from './table'
+import { EpTimeline } from './timeline'
+import { EpTimelineItem } from './timeline-item'
+import { EpSelect } from './select'
+import { EpGridLayout } from './grid-layout'
+import { EpGridItem } from './grid-item'
+import { EpButton } from './button'
+import { EpFormItem } from './form-item'
+import { EpSearchForm } from './search-form'
+import { EpCrud } from './crud'
 
 export interface InstallationOptions {
   locale: any,
@@ -35,28 +35,28 @@ export type ComponentSize = ElementUIComponentSize
 
 export type HorizontalAlignment = ElementUIHorizontalAlignment
 
-export class Aside extends DdAside {}
-export class Drawer extends DdDrawer {}
-export class Form extends DdForm {}
-export class FullScreen extends DdFullScreen {}
-export class InputNumber extends DdInputNumber {}
-export class StatisticCountdown extends DdStatisticCountdown {}
-export class Statistic extends DdStatistic {}
-export class Table extends DdTable {}
-export class Timeline extends DdTimeline {}
-export class TimelineItem extends DdTimelineItem {}
-export class Select extends DdSelect {}
-export class GridLayout extends DdGridLayout {}
-export class GridItem extends DdGridItem {}
+export class Aside extends EpAside {}
+export class Drawer extends EpDrawer {}
+export class Form extends EpForm {}
+export class FullScreen extends EpFullScreen {}
+export class InputNumber extends EpInputNumber {}
+export class StatisticCountdown extends EpStatisticCountdown {}
+export class Statistic extends EpStatistic {}
+export class Table extends EpTable {}
+export class Timeline extends EpTimeline {}
+export class TimelineItem extends EpTimelineItem {}
+export class Select extends EpSelect {}
+export class GridLayout extends EpGridLayout {}
+export class GridItem extends EpGridItem {}
 
 /** Button Component */
-export class Button extends DdButton {}
+export class Button extends EpButton {}
 
 /** FormItem Component */
-export class FormItem extends DdFormItem {}
+export class FormItem extends EpFormItem {}
 
 /** SearchForm Component */
-export class SearchForm extends DdSearchForm {}
+export class SearchForm extends EpSearchForm {}
 
 /** Crud Component */
-export class Crud extends DdCrud {}
+export class Crud extends EpCrud {}

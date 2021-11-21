@@ -2,7 +2,7 @@
 import ElDrawer from "element-ui/lib/drawer";
 import { throttle, debounce } from "element-pro/src/utils/util.js";
 export default {
-  name: "DdDrawer",
+  name: "EpDrawer",
   props: Object.assign({}, ElDrawer.props, {
     drag: {
       type: Boolean,
@@ -30,7 +30,7 @@ export default {
       clientSize: 0,
       dragDirection: "row",
       moveType: false,
-      localWrapperClosable: this.wrapperClosable
+      localWrapperClosable: this.wrapperClosable,
     };
   },
   computed: {
@@ -59,8 +59,8 @@ export default {
       this.$refs.drawer.closeDrawer();
     },
     onMousedown(e) {
-      e.stopPropagation()
-      this.localWrapperClosable = false
+      e.stopPropagation();
+      this.localWrapperClosable = false;
       this.moveType = true;
       let currentSize = 0;
       document.onmousemove = throttle((e) => {
@@ -88,14 +88,13 @@ export default {
         }
       }, 60);
       document.onmouseup = (e) => {
-        e.stopPropagation()
+        e.stopPropagation();
         setTimeout(() => {
-          this.localWrapperClosable = this.wrapperClosable
+          this.localWrapperClosable = this.wrapperClosable;
         }, 0);
         this.moveType = false;
         document.onmousemove = document.onmouseup = null;
       };
-      
     },
     initSize() {
       this.dragDirection =
@@ -120,7 +119,7 @@ export default {
   },
   watch: {
     visible: {
-      handler: function(value) {
+      handler: function (value) {
         if (value) {
           this.initSize();
         }
@@ -131,8 +130,9 @@ export default {
   render() {
     const defaultProps = {};
     Object.keys(ElDrawer.props).forEach((k) => {
-      if (k === 'wrapperClosable') {
-        this.localWrapperClosable !== undefined && (defaultProps.wrapperClosable = this.localWrapperClosable);
+      if (k === "wrapperClosable") {
+        this.localWrapperClosable !== undefined &&
+          (defaultProps.wrapperClosable = this.localWrapperClosable);
       } else {
         this[k] !== undefined && (defaultProps[k] = this[k]);
       }

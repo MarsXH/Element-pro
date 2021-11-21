@@ -43,7 +43,7 @@ const StatisticProps = {
 };
 
 export default {
-  name: "DdStatistic",
+  name: "EpStatistic",
   props: StatisticProps,
 
   render() {

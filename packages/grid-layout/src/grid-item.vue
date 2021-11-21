@@ -31,7 +31,7 @@ import "@interactjs/dev-tools";
 import interact from "@interactjs/interact";
 
 export default {
-  name: "DdGridItem",
+  name: "EpGridItem",
   props: {
     isDraggable: {
       type: Boolean,
@@ -109,7 +109,7 @@ export default {
     },
   },
   inject: ["eventBus", "layout"],
-  data: function() {
+  data: function () {
     return {
       cols: 1,
       containerWidth: 100,
@@ -194,7 +194,7 @@ export default {
 
     this.rtl = getDocumentDir() === "rtl";
   },
-  beforeDestroy: function() {
+  beforeDestroy: function () {
     this.eventBus.$off("updateWidth", this.updateWidthHandler);
     this.eventBus.$off("compact", this.compactHandler);
     this.eventBus.$off("setDraggable", this.setDraggableHandler);
@@ -207,7 +207,7 @@ export default {
       this.interactObj.unset();
     }
   },
-  mounted: function() {
+  mounted: function () {
     if (this.layout.responsive && this.layout.lastBreakpoint) {
       this.cols = getColsFromBreakpoint(
         this.layout.lastBreakpoint,
@@ -237,69 +237,69 @@ export default {
     this.createStyle();
   },
   watch: {
-    isDraggable: function() {
+    isDraggable: function () {
       this.draggable = this.isDraggable;
     },
-    static: function() {
+    static: function () {
       this.tryMakeDraggable();
       this.tryMakeResizable();
     },
-    draggable: function() {
+    draggable: function () {
       this.tryMakeDraggable();
     },
-    isResizable: function() {
+    isResizable: function () {
       this.resizable = this.isResizable;
     },
-    resizable: function() {
+    resizable: function () {
       this.tryMakeResizable();
     },
-    rowHeight: function() {
+    rowHeight: function () {
       this.createStyle();
       this.emitContainerResized();
     },
-    cols: function() {
-      this.tryMakeResizable();
-      this.createStyle();
-      this.emitContainerResized();
-    },
-    containerWidth: function() {
+    cols: function () {
       this.tryMakeResizable();
       this.createStyle();
       this.emitContainerResized();
     },
-    x: function(newVal) {
+    containerWidth: function () {
+      this.tryMakeResizable();
+      this.createStyle();
+      this.emitContainerResized();
+    },
+    x: function (newVal) {
       this.innerX = newVal;
       this.createStyle();
     },
-    y: function(newVal) {
+    y: function (newVal) {
       this.innerY = newVal;
       this.createStyle();
     },
-    h: function(newVal) {
+    h: function (newVal) {
       this.innerH = newVal;
       this.createStyle();
     },
-    w: function(newVal) {
+    w: function (newVal) {
       this.innerW = newVal;
       this.createStyle();
     },
-    renderRtl: function() {
+    renderRtl: function () {
       this.tryMakeResizable();
       this.createStyle();
     },
-    minH: function() {
+    minH: function () {
       this.tryMakeResizable();
     },
-    maxH: function() {
+    maxH: function () {
       this.tryMakeResizable();
     },
-    minW: function() {
+    minW: function () {
       this.tryMakeResizable();
     },
-    maxW: function() {
+    maxW: function () {
       this.tryMakeResizable();
     },
-    "$parent.margin": function(margin) {
+    "$parent.margin": function (margin) {
       if (
         !margin ||
         (margin[0] == this.margin[0] && margin[1] == this.margin[1])
@@ -345,7 +345,7 @@ export default {
     },
   },
   methods: {
-    createStyle: function() {
+    createStyle: function () {
       if (this.x + this.w > this.cols) {
         this.innerX = 0;
         this.innerW = this.w > this.cols ? this.cols : this.w;
@@ -406,7 +406,7 @@ export default {
         styleProps.width
       );
     },
-    handleResize: function(event) {
+    handleResize: function (event) {
       if (this.static) return;
       const position = getControlPosition(event);
       if (position == null) return;
@@ -592,7 +592,7 @@ export default {
         this.innerW
       );
     },
-    calcPosition: function(x, y, w, h) {
+    calcPosition: function (x, y, w, h) {
       const colWidth = this.calcColWidth();
       let out;
       if (this.renderRtl) {
@@ -664,16 +664,16 @@ export default {
       h = Math.max(Math.min(h, this.maxRows - this.innerY), 0);
       return { w, h };
     },
-    updateWidth: function(width, colNum) {
+    updateWidth: function (width, colNum) {
       this.containerWidth = width;
       if (colNum !== undefined && colNum !== null) {
         this.cols = colNum;
       }
     },
-    compact: function() {
+    compact: function () {
       this.createStyle();
     },
-    tryMakeDraggable: function() {
+    tryMakeDraggable: function () {
       const self = this;
       if (this.interactObj === null || this.interactObj === undefined) {
         this.interactObj = interact(this.$refs.item);
@@ -689,7 +689,7 @@ export default {
         this.interactObj.draggable(opts);
         if (!this.dragEventSet) {
           this.dragEventSet = true;
-          this.interactObj.on("dragstart dragmove dragend", function(event) {
+          this.interactObj.on("dragstart dragmove dragend", function (event) {
             self.handleDrag(event);
           });
         }
@@ -699,7 +699,7 @@ export default {
         });
       }
     },
-    tryMakeResizable: function() {
+    tryMakeResizable: function () {
       const self = this;
       if (this.interactObj === null || this.interactObj === undefined) {
         this.interactObj = interact(this.$refs.item);
@@ -741,11 +741,12 @@ export default {
         this.interactObj.resizable(opts);
         if (!this.resizeEventSet) {
           this.resizeEventSet = true;
-          this.interactObj.on("resizestart resizemove resizeend", function(
-            event
-          ) {
-            self.handleResize(event);
-          });
+          this.interactObj.on(
+            "resizestart resizemove resizeend",
+            function (event) {
+              self.handleResize(event);
+            }
+          );
         }
       } else {
         this.interactObj.resizable({
@@ -753,7 +754,7 @@ export default {
         });
       }
     },
-    autoSize: function() {
+    autoSize: function () {
       this.previousW = this.innerW;
       this.previousH = this.innerH;
 

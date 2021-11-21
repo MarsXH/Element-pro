@@ -4,38 +4,38 @@
 
 <script>
 export default {
-  name: "DdCrud",
+  name: "EpCrud",
   props: {
     itemName: {
       type: String,
-      default: ""
+      default: "",
     },
     tableData: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     tableConfig: {
       type: Array,
       default: () => ({
-        tableColumns: []
-      })
+        tableColumns: [],
+      }),
     },
     searchFormData: {
       type: Array,
-      default: () => ({})
+      default: () => ({}),
     },
     searchFormConfig: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     editFormData: {
       type: Array,
-      default: () => ({})
+      default: () => ({}),
     },
     editFormConfig: {
       type: Array,
-      default: () => ({})
-    }
-  }
+      default: () => ({}),
+    },
+  },
 };
 </script>

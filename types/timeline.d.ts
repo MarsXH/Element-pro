@@ -1,9 +1,9 @@
 
 import { ElementUIComponent } from './component'
-import { DdTimelineItem } from './timeline-item';
+import { EpTimelineItem } from './timeline-item';
 
-export declare class DdTimeline extends ElementUIComponent {
-  static Item: typeof DdTimelineItem;
+export declare class EpTimeline extends ElementUIComponent {
+  static Item: typeof EpTimelineItem;
 
   pending: any;
 

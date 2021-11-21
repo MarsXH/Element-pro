@@ -1,6 +1,6 @@
 import { ElementUIComponent } from './component'
 
-export declare class DdFullScreen extends ElementUIComponent {
+export declare class EpFullScreen extends ElementUIComponent {
 
   showClose: Boolean
 

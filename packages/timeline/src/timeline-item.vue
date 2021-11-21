@@ -6,7 +6,7 @@ import {
   getListeners,
 } from "element-pro/src/depend-utils/props-util";
 export default {
-  name: "DdTimelineItem",
+  name: "EpTimelineItem",
   props: {
     color: {
       type: String,

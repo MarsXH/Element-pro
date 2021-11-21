@@ -1,6 +1,6 @@
 import { ElementUIComponent } from './component'
 
 /** Button Component */
-export declare class DdButton extends ElementUIComponent {
+export declare class EpButton extends ElementUIComponent {
   /** Button Props */
 }

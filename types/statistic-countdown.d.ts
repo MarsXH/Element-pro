@@ -1,7 +1,7 @@
 import { ElementUIComponent } from './component'
 import { VNode } from 'vue';
 
-export declare class DdStatisticCountdown extends ElementUIComponent {
+export declare class EpStatisticCountdown extends ElementUIComponent {
   format: string;
 
   prefix: string | VNode;

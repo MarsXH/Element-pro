@@ -17,7 +17,7 @@
 <script>
 import { throttle } from "element-pro/src/utils/util.js";
 export default {
-  name: "DdAside",
+  name: "EpAside",
   props: {
     drag: {
       type: Boolean,

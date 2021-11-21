@@ -1,6 +1,6 @@
 import { ElementUIComponent } from './component'
 
 /** Crud Component */
-export declare class DdCrud extends ElementUIComponent {
+export declare class EpCrud extends ElementUIComponent {
   /** Crud Props */
 }

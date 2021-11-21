@@ -1,7 +1,7 @@
 import { ElementUIComponent } from './component'
 
 /** Aside Component */
-export declare class DdAside extends ElementUIComponent {
+export declare class EpAside extends ElementUIComponent {
   openType	: Boolean
 
   drag: Boolean

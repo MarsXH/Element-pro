@@ -1,6 +1,6 @@
 import { ElementUIComponent } from './component'
 
 /** SearchForm Component */
-export declare class DdSearchForm extends ElementUIComponent {
+export declare class EpSearchForm extends ElementUIComponent {
   /** SearchForm Props */
 }

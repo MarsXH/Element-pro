@@ -89,9 +89,9 @@ title: 开发文档
 3. 在`types/element-pro.d.ts`文件中添加组件 TS 声明文件的引入
 
 ```javascript
-import { DdButton } from "./button";
+import { EpButton } from "./button";
 /** Button Component */
-export class Button extends DdButton {}
+export class Button extends EpButton {}
 ```
 
 4. 在`packages/button`文件夹下创建`index.js`文件
@@ -115,7 +115,7 @@ export default Button;
 
   <script>
     export default {
-      name: 'DdButton'
+      name: 'EpButton'
     };
   </script>
 ```
@@ -132,7 +132,7 @@ export default Button;
   import { ElementUIComponent } from './component'
 
   /** Button Component */
-  export declare class DdButton extends ElementUIComponent {
+  export declare class EpButton extends ElementUIComponent {
     /** Button Props */
   }
 ```

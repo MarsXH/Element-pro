@@ -1,16 +1,16 @@
 <script>
 export default {
-  name: "DdFormItem",
+  name: "EpFormItem",
   props: {
     properties: {
       type: Object,
       default() {
         return {
-          type: "" // 标签类型
+          type: "", // 标签类型
         };
-      }
+      },
     },
-    value: { default: "" }
+    value: { default: "" },
   },
   watch: {
     values: {
@@ -20,13 +20,13 @@ export default {
         this.updating = false;
       },
       deep: true,
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   data() {
     return {
       values: this.value,
-      updating: false
+      updating: false,
     };
   },
   render(h) {
@@ -44,27 +44,27 @@ export default {
       const item = vm.properties;
       const value = vm.value;
       const modelEvents = {
-        input: function(value) {
+        input: function (value) {
           console.log(111);
           console.log(value);
           vm.values = value;
         },
-        ...vm.filterEvents(item)
+        ...vm.filterEvents(item),
       };
       const formEachItem = h(
         item.type.startWith("el") ? `${item.type}` : `el-${item.type}`,
         {
           style: item.style || {},
           attrs: {
-            ...vm.filterAttrs(item)
+            ...vm.filterAttrs(item),
           },
           props: {
             value,
-            ...item
+            ...item,
           },
           on: {
-            ...modelEvents
-          }
+            ...modelEvents,
+          },
         }
       );
       const button = h(
@@ -73,15 +73,15 @@ export default {
           style: item.style || {},
           attrs: {
             ...vm.filterAttrs(item),
-            type: item._type
+            type: item._type,
           },
           props: {
             ...item,
-            type: item._type
+            type: item._type,
           },
           on: {
-            ...modelEvents
-          }
+            ...modelEvents,
+          },
         },
         item.text || item.value
       );
@@ -91,48 +91,48 @@ export default {
         {
           style: item.style || {},
           attrs: {
-            ...vm.filterAttrs(item)
+            ...vm.filterAttrs(item),
           },
           props: {
             value,
-            ...item
+            ...item,
           },
           on: {
-            ...modelEvents
-          }
+            ...modelEvents,
+          },
         },
 
-        (item.options || []).map(option => {
+        (item.options || []).map((option) => {
           return h("el-option", {
             attrs: {
-              ...vm.filterAttrs(option)
+              ...vm.filterAttrs(option),
             },
             props: {
               key: option.value,
-              ...option
-            }
+              ...option,
+            },
           });
         })
       );
-      const radios = (item.options || []).map(option => {
+      const radios = (item.options || []).map((option) => {
         option = {
           name: item.name,
-          ...option
+          ...option,
         };
         return h(
           "el-radio",
           {
             style: item.style || {},
             attrs: {
-              ...vm.filterAttrs(option)
+              ...vm.filterAttrs(option),
             },
             props: {
               value,
-              ...option
+              ...option,
             },
             on: {
-              ...modelEvents
-            }
+              ...modelEvents,
+            },
           },
           [option.text]
         );
@@ -141,29 +141,29 @@ export default {
         style: item.style || {},
         attrs: {
           ...vm.filterAttrs(item),
-          type: item._type
+          type: item._type,
         },
         props: {
           value,
           ...item,
-          type: item._type
+          type: item._type,
         },
         on: {
-          ...modelEvents
-        }
+          ...modelEvents,
+        },
       });
       const input = h("el-input", {
         style: item.style || {},
         attrs: {
-          ...vm.filterAttrs(item)
+          ...vm.filterAttrs(item),
         },
         props: {
           value,
-          ...item
+          ...item,
         },
         on: {
-          ...modelEvents
-        }
+          ...modelEvents,
+        },
       });
       return {
         [item.type]: formEachItem,
@@ -172,14 +172,14 @@ export default {
         input: input,
         radios: radios,
         datePicker: datePicker,
-        "date-picker": datePicker
+        "date-picker": datePicker,
       };
     },
     filterAttrs(item = {}) {
       const keys = Object.keys(item);
       const attrs = {};
 
-      keys.forEach(key => {
+      keys.forEach((key) => {
         const value = item[key];
 
         if (
@@ -197,7 +197,7 @@ export default {
       const keys = Object.keys(item);
       const events = {};
 
-      keys.forEach(key => {
+      keys.forEach((key) => {
         const value = item[key];
 
         if (typeof value === "function") {
@@ -206,7 +206,7 @@ export default {
       });
 
       return events;
-    }
-  }
+    },
+  },
 };
 </script>

@@ -1,20 +1,20 @@
 <script>
 if (typeof String.prototype.startWith != "function") {
-  String.prototype.startWith = function(prefix) {
+  String.prototype.startWith = function (prefix) {
     return this.slice(0, prefix.length) === prefix;
   };
 }
 export default {
-  name: "DdForm",
+  name: "EpForm",
   props: {
     model: {
-      type: Object
+      type: Object,
     },
     formRef: {
       type: String,
       default() {
         return "ddForm";
-      }
+      },
     },
     config: {
       type: Object,
@@ -22,13 +22,13 @@ export default {
         return {
           formAttr: {},
           rules: {},
-          properties: {}
+          properties: {},
         };
-      }
+      },
     },
     labelWidth: {
-      type: String
-    }
+      type: String,
+    },
   },
   watch: {
     values: {
@@ -38,7 +38,7 @@ export default {
         this.updating = false;
       },
       deep: true,
-      immediate: true
+      immediate: true,
     },
     model: {
       handler(model, model2) {
@@ -49,13 +49,13 @@ export default {
         }
       },
       immediate: true,
-      deep: true
-    }
+      deep: true,
+    },
   },
   data() {
     return {
       updating: false,
-      values: this.mergeValues()
+      values: this.mergeValues(),
     };
   },
   render(h) {
@@ -66,24 +66,24 @@ export default {
         props: {
           ...vm.config.formAttr,
           model: vm.values,
-          labelWidth: vm.labelWidth
+          labelWidth: vm.labelWidth,
         },
         ref: vm.formRef,
         nativeOn: {
-          submit: event => {
+          submit: (event) => {
             if (vm.config.formAttr.isPreventDefault) {
               // 阻止默认提交事件
               event.preventDefault();
             }
-          }
-        }
+          },
+        },
       },
       [
         h(vm.config.title ? "h3" : "span", vm.config.title || ""),
         h(vm.config.describe ? "p" : "span", vm.config.describe || ""),
         ...(vm.$slots.prepend || []),
         ...(vm.renderFormItems(h) || []),
-        ...(vm.$slots.append || [])
+        ...(vm.$slots.append || []),
       ]
     );
   },
@@ -101,7 +101,7 @@ export default {
     },
     setFieldsValue(obj) {
       const vm = this;
-      Object.keys(obj).map(key => {
+      Object.keys(obj).map((key) => {
         vm.values[key] = obj[key];
       });
     },
@@ -132,7 +132,7 @@ export default {
       const { properties } = vm.config;
 
       let formData = {};
-      Object.keys(properties).map(key => {
+      Object.keys(properties).map((key) => {
         const { type, multiple } = properties[key];
         let defaultValue;
         if (type === "checkbox" || (type === "select" && multiple)) {
@@ -142,14 +142,14 @@ export default {
           defaultValue = properties[key].defaultValue;
         }
         Object.assign(formData, {
-          [key]: defaultValue
+          [key]: defaultValue,
         });
       });
       let mergeValues = {
         ...formData,
-        ...model
+        ...model,
       };
-      Object.keys(formData).forEach(key => {
+      Object.keys(formData).forEach((key) => {
         // 强制设置多选的value为空数组，因为model可能会乱设置
         if (
           Array.isArray(formData[key]) &&
@@ -168,7 +168,7 @@ export default {
       const keys = Object.keys(item);
       const attrs = {};
 
-      keys.forEach(key => {
+      keys.forEach((key) => {
         const value = item[key];
 
         if (
@@ -186,7 +186,7 @@ export default {
       const keys = Object.keys(item);
       const events = {};
 
-      keys.forEach(key => {
+      keys.forEach((key) => {
         const value = item[key];
 
         if (typeof value === "function") {
@@ -209,10 +209,10 @@ export default {
       const { values } = vm;
       const value = values[key] || null;
       const modelEvents = {
-        input: function(value) {
+        input: function (value) {
           values[key] = value;
         },
-        ...vm.filterEvents(item)
+        ...vm.filterEvents(item),
       };
       const { label, size } = item;
 
@@ -222,22 +222,22 @@ export default {
           props: {
             prop: key,
             label,
-            size
-          }
+            size,
+          },
         },
         [
           h("dd-form-item", {
             props: {
               value,
-              properties: item
+              properties: item,
             },
             on: {
-              ...modelEvents
-            }
-          })
+              ...modelEvents,
+            },
+          }),
         ]
       );
-    }
-  }
+    },
+  },
 };
 </script>

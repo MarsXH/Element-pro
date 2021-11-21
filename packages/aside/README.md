@@ -24,7 +24,7 @@ dd-aside Attributes
 
 <script>
 export default {
-  name: "DdAsideTemplate",
+  name: "EpAsideTemplate",
   data() {
     return {
       openType: true

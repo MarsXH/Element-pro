@@ -3,7 +3,7 @@ import { ElementUIComponent } from './component'
 export type InputNumberSize = 'large' | 'small'
 
 /** InputNumber Component */
-export declare class DdInputNumber extends ElementUIComponent {
+export declare class EpInputNumber extends ElementUIComponent {
   /** Binding value */
   value: number
 

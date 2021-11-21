@@ -1,7 +1,7 @@
 
 import { ElementUIComponent } from './component'
 
-export declare class DdTimelineItem extends ElementUIComponent {
+export declare class EpTimelineItem extends ElementUIComponent {
   pending: any;
 
   color: string;

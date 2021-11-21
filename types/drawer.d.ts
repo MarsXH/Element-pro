@@ -17,7 +17,7 @@ interface DrawerSlots {
     [key: string]: VNode[]
 }
 /** Drawer Component */
-export declare class DdDrawer extends ElementUIComponent {
+export declare class EpDrawer extends ElementUIComponent {
     appendToBody: boolean
 
     beforeClose: (done: hide) => void

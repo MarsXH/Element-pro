@@ -38,7 +38,7 @@ export interface treeNode {
 }
 
 /** Table Component */
-export declare class DdTable extends ElementUIComponent {
+export declare class EpTable extends ElementUIComponent {
   columes: any
 
   pagination: any

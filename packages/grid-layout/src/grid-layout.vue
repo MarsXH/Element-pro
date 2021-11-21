@@ -30,13 +30,13 @@ import {
   getColsFromBreakpoint,
   findOrGenerateResponsiveLayout,
 } from "element-pro/src/utils/responsiveUtils";
-import DdGridItem from "./grid-item.vue";
+import EpGridItem from "./grid-item.vue";
 import {
   addWindowEventListener,
   removeWindowEventListener,
 } from "element-pro/src/utils/grid-dom";
 export default {
-  name: "DdGridLayout",
+  name: "EpGridLayout",
   provide() {
     return {
       eventBus: null,
@@ -44,7 +44,7 @@ export default {
     };
   },
   components: {
-    DdGridItem,
+    EpGridItem,
   },
   props: {
     autoSize: {

@@ -3,13 +3,13 @@ import ElTable from "element-ui/lib/table";
 
 const methods = {};
 Object.keys(ElTable.methods).forEach((item) => {
-  methods[item] = function(...args) {
+  methods[item] = function (...args) {
     this.$refs.ddtable[item](...args);
   };
 });
 
 export default {
-  name: "DdTable",
+  name: "EpTable",
   props: Object.assign({}, ElTable.props, {
     columns: {
       type: Array,
@@ -31,13 +31,13 @@ export default {
     };
   },
   watch: {
-    data: function() {
+    data: function () {
       if (this.scrollToTop) {
         this.$refs.ddtable.bodyWrapper.scrollTop = 0;
       }
     },
     columns: {
-      handler: function() {
+      handler: function () {
         this.columnUpdate = false;
         this.$nextTick(() => {
           this.columnUpdate = true;

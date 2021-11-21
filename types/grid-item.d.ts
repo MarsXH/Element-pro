@@ -1,7 +1,7 @@
 import { ElementUIComponent } from './component'
 
 /** GridLayout Component */
-export declare class DdGridItem extends ElementUIComponent {
+export declare class EpGridItem extends ElementUIComponent {
   isDraggable: Boolean
   isResizable: Boolean
   static: Boolean

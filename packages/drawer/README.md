@@ -27,7 +27,7 @@ dd-drawer Attributes
 
 <script>
 export default {
-  name: "DdDrawerTemplate",
+  name: "EpDrawerTemplate",
   data() {
     return {
     };

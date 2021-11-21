@@ -1,8 +1,8 @@
 <script>
-import padEnd from 'lodash/padEnd';
+import padEnd from "lodash/padEnd";
 
 export default {
-  name: 'DdStatisticNumber',
+  name: "EpStatisticNumber",
   functional: true,
   render(h, context) {
     const {
@@ -10,12 +10,12 @@ export default {
       formatter,
       precision,
       decimalSeparator,
-      groupSeparator = '',
+      groupSeparator = "",
       prefixCls,
     } = context.props;
     let valueNode;
 
-    if (typeof formatter === 'function') {
+    if (typeof formatter === "function") {
       // Customize formatter
       valueNode = formatter({ value, h });
     } else {
@@ -27,12 +27,12 @@ export default {
         valueNode = val;
       } else {
         const negative = cells[1];
-        let int = cells[2] || '0';
-        let decimal = cells[4] || '';
+        let int = cells[2] || "0";
+        let decimal = cells[4] || "";
 
         int = int.replace(/\B(?=(\d{3})+(?!\d))/g, groupSeparator);
-        if (typeof precision === 'number') {
-          decimal = padEnd(decimal, precision, '0').slice(0, precision);
+        if (typeof precision === "number") {
+          decimal = padEnd(decimal, precision, "0").slice(0, precision);
         }
 
         if (decimal) {

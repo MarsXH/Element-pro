@@ -1,10 +1,10 @@
 
 import { ElementUIComponent } from './component'
 import { VNode } from 'vue';
-import { DdStatisticCountdown } from './statistic-countdown';
+import { EpStatisticCountdown } from './statistic-countdown';
 
-export declare class DdStatistic extends ElementUIComponent {
-  static Countdown: typeof DdStatisticCountdown;
+export declare class EpStatistic extends ElementUIComponent {
+  static Countdown: typeof EpStatisticCountdown;
 
   decimalSeparator: string;
 

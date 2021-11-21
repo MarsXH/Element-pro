@@ -6,10 +6,10 @@ import {
   getListeners,
 } from "element-pro/src/depend-utils/props-util";
 import { cloneElement } from "element-pro/src/depend-utils/vnode";
-import DdTimelineItem from "./timeline-item.vue";
+import EpTimelineItem from "./timeline-item.vue";
 
 export default {
-  name: "DdTimeline",
+  name: "EpTimeline",
   props: {
     mode: {
       type: String,
@@ -43,12 +43,12 @@ export default {
     const children = filterEmpty(this.$slots.default);
 
     const pendingItem = pending ? (
-      <DdTimelineItem pending={!!pending}>
+      <EpTimelineItem pending={!!pending}>
         <template slot="dot">
           {pendingDot || <i class="el-icon-loading"></i>}
         </template>
         {pendingNode}
-      </DdTimelineItem>
+      </EpTimelineItem>
     ) : null;
 
     const timeLineItems = reverse

@@ -13,7 +13,7 @@ function getTime(value) {
 }
 
 export default {
-  name: "DdStatisticCountdown",
+  name: "EpStatisticCountdown",
   props: Object.assign({}, Statistic.props, {
     format: {
       type: String,

@@ -1,6 +1,6 @@
 import { ElementUIComponent } from './component'
 
-export declare class DdForm extends ElementUIComponent {
+export declare class EpForm extends ElementUIComponent {
 
   model: any
 

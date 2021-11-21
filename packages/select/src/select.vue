@@ -204,7 +204,7 @@ import NavigationMixin from "./navigation-mixin";
 export default {
   mixins: [Emitter, Locale, Focus("reference"), NavigationMixin],
 
-  name: "DdSelect",
+  name: "EpSelect",
 
   componentName: "ElSelect",
 

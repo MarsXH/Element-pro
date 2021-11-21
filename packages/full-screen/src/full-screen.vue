@@ -14,7 +14,7 @@ import {
   getFUllScreenEventName,
 } from "element-pro/src/utils/util.js";
 export default {
-  name: "DdFullScreen",
+  name: "EpFullScreen",
   props: {
     show: {
       type: Boolean,
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       showType: false,
-      eventName: 'webkitfullscreenchange'
+      eventName: "webkitfullscreenchange",
     };
   },
   mounted() {
@@ -67,7 +67,7 @@ export default {
     window.removeEventListener(this.eventName, this.onChange);
   },
   watch: {
-    show: function(newValue) {
+    show: function (newValue) {
       if (newValue !== this.showType) {
         if (newValue) {
           this.openFullScreen();

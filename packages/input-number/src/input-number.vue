@@ -69,7 +69,7 @@ import Focus from "element-ui/lib/mixins/focus";
 import RepeatClick from "element-ui/lib/directives/repeat-click";
 
 export default {
-  name: "DdInputNumber",
+  name: "EpInputNumber",
   mixins: [Focus("input")],
   inject: {
     elForm: {
@@ -233,7 +233,7 @@ export default {
     },
     getPrecision(value) {
       if (value === undefined) return 0;
-      const valueString = value ? value.toString() : '0';
+      const valueString = value ? value.toString() : "0";
       const dotPosition = valueString.indexOf(".");
       let precision = 0;
       if (dotPosition !== -1) {
