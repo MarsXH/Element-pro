@@ -48,18 +48,11 @@ module.exports = {
     //   ]
     // },
     {
-      "title": "快查",
-      "collapsable": false,
-      "sidebarDepth": 0,
-      "children": [
-        "quickQuery",
-      ]
-    },
-    {
       "title": "样式",
       "collapsable": false,
       "sidebarDepth": 0,
       "children": [
+        "quickQuery",
         "reset",
         "display",
         "box",

@@ -1,6 +1,6 @@
-> 使用时只需引入 `element-pro-ui/lib/theme-chalk/index.css`即可。
-
 # Quick Query 快查
+
+> 使用时只需引入 `element-pro-ui/lib/theme-chalk/index.css`即可。
 
 <!-- ## [Color 颜色](/common-style/color.html)
 
