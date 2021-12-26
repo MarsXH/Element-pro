@@ -60,9 +60,16 @@
 > **类名：`.border-radius-{value}`**  
 
 该 value 属性的值是以下之一：     
-0, 3, 5, 8, 10, 12, 15, 18, 20    
+0, 2, 5, 8, 10, 12, 15, 18, 20    
 
 ---
 
 - **单独封装了 border-radius: 50%**
 > **类名：`.border-radius-50`** 即：`border-radius: 50%;`   
+
+## border 边框
+
+指定元素的 `border` 属性。     
+
+- **单独封装了 border: 0**
+> **类名：`.border-0`** 即：`border: 0;`   

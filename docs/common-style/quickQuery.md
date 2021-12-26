@@ -1,6 +1,7 @@
 # Quick Query 快查
 
 > 使用时只需引入 `element-pro-ui/lib/theme-chalk/index.css`即可。
+> 类名后增加 `-im` 即 `!important`， eg: `w-200-im`。
 
 <!-- ## [Color 颜色](/common-style/color.html)
 
@@ -86,6 +87,10 @@ color = red, pink,  pink,  pink,  pink,  pink,  pink,  pink,  pink,  pink,
 ```
 .border-radius-{value} // value = 0, 3, 5, 8, 10, 12, 15, 18, 20
 .border-radius-50 // border-radius: 50%;
+```
+#### border: 0
+```
+.border-0 // border: 0;
 ```
 ## [Font 字体/文档流](/common-style/font.html#font-字体-文档流)
 

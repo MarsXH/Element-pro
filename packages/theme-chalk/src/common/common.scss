@@ -1,7 +1,14 @@
 /*
+ * Common • v1.0.0
+ * @author Created by ZXH on 2021-10-20 .
+ */
+
+/*
  * reset
 */
 @import './reset.scss';
+
+$important: 'im';
 
 /*
  * display 相关
@@ -9,6 +16,9 @@
 $display-list: none, block, inline, inline-block, table, table-cell, table-column, table-row, flex, inline-flex, grid, inline-grid;
 @each $display in $display-list {
 	.d-#{$display} {
+		display: $display;
+	}
+	.d-#{$display}-#{$important} {
 		display: $display !important;
 	}
 }
@@ -20,6 +30,9 @@ $display-list: none, block, inline, inline-block, table, table-cell, table-colum
 $flex-direction-list: row, column, row-reverse, column-reverse;
 @each $fd in $flex-direction-list {
 	.flex-#{$fd} {
+		flex-direction: $fd;
+	}
+	.flex-#{$fd}-#{$important} {
 		flex-direction: $fd !important;
 	}
 }
@@ -28,6 +41,9 @@ $flex-direction-list: row, column, row-reverse, column-reverse;
 $flex-wrap-list: nowrap, wrap, wrap-reverse;
 @each $fw in $flex-wrap-list {
 	.flex-#{$fw} {
+		flex-wrap: $fw;
+	}
+	.flex-#{$fw}-#{$important} {
 		flex-wrap: $fw !important;
 	}
 }
@@ -36,6 +52,9 @@ $flex-wrap-list: nowrap, wrap, wrap-reverse;
 $flex-justify-list: (start, flex-start), (end, flex-end), (center, center), (space-between, space-between), (space-around, space-around);
 @each $fj, $name in $flex-justify-list {
 	.justify-#{$fj} {
+		justify-content: $name;
+	}
+	.justify-#{$fj}-#{$important} {
 		justify-content: $name !important;
 	}
 }
@@ -44,6 +63,9 @@ $flex-justify-list: (start, flex-start), (end, flex-end), (center, center), (spa
 $align-items-list: (start, flex-start), (end, flex-end), (center, center), (baseline, baseline), (stretch, stretch);
 @each $ai, $name in $align-items-list {
 	.align-#{$ai} {
+		align-items: $name;
+	}
+	.align-#{$ai}-#{$important} {
 		align-items: $name !important;
 	}
 }
@@ -52,6 +74,9 @@ $align-items-list: (start, flex-start), (end, flex-end), (center, center), (base
 $align-content-list: (start, flex-start), (end, flex-end), (center, center), (space-between, space-between), (space-around, space-around), (stretch, stretch);
 @each $ac, $name in $align-content-list {
 	.align-content-#{$ac} {
+		align-content: $name;
+	}
+	.align-content-#{$ac}-#{$important} {
 		align-content: $name !important;
 	}
 }
@@ -60,6 +85,9 @@ $align-content-list: (start, flex-start), (end, flex-end), (center, center), (sp
 $align-self-list: (auto, auto), (start, flex-start), (end, flex-end), (center, center), (baseline, baseline), (stretch, stretch);
 @each $as, $name in $align-self-list {
 	.align-self-#{$as} {
+		align-self: $name;
+	}
+	.align-self-#{$as}-#{$important} {
 		align-self: $name !important;
 	}
 }
@@ -68,6 +96,9 @@ $align-self-list: (auto, auto), (start, flex-start), (end, flex-end), (center, c
 $order-list: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 @each $o in $order-list {
 	.order-#{$o} {
+		order: $o;
+	}
+	.order-#{$o}-#{$important} {
 		order: $o !important;
 	}
 }
@@ -76,9 +107,15 @@ $order-list: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 $coefficient-list: 0, 1;
 @each $c in $coefficient-list {
 	.flex-grow-#{$c} {
-		flex-grow: $c !important;
+		flex-grow: $c;
 	}
 	.flex-shrink-#{$c} {
+		flex-shrink: $c;
+	}
+	.flex-grow-#{$c}-#{$important} {
+		flex-grow: $c !important;
+	}
+	.flex-shrink-#{$c}-#{$important} {
 		flex-shrink: $c !important;
 	}
 }
@@ -92,7 +129,7 @@ $coefficient-list: 0, 1;
 */
 $mp-list: 0, 2, 5, 8, 10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 50, 60, 70, 80, 90, 100;
 @each $mp in $mp-list {
-	$size: $mp + px !important;
+	$size: $mp + px;
 
   $direction-list: (t, top), (b, bottom), (l, left), (r, right);
 
@@ -104,9 +141,21 @@ $mp-list: 0, 2, 5, 8, 10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 50, 60
       padding-#{$name}: $size;
     }
     .m#{$direction}-auto {
-      margin-#{$name}: auto !important;
+      margin-#{$name}: auto;
     }
     .p#{$direction}-auto {
+      padding-#{$name}: auto;
+    }
+    .m#{$direction}-#{$mp}-#{$important} {
+      margin-#{$name}: $size !important;
+    }
+    .p#{$direction}-#{$mp}-#{$important} {
+      padding-#{$name}: $size !important;
+    }
+    .m#{$direction}-auto-#{$important} {
+      margin-#{$name}: auto !important;
+    }
+    .p#{$direction}-auto-#{$important} {
       padding-#{$name}: auto !important;
     }
   }
@@ -115,27 +164,53 @@ $mp-list: 0, 2, 5, 8, 10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 50, 60
 		margin-left: $size;
 		margin-right: $size;
 	}
+  .mx-#{$mp}-#{$important} {
+		margin-left: $size !important;
+		margin-right: $size !important;
+	}
 
   .my-#{$mp} {
 		margin-top: $size;
 		margin-bottom: $size;
+	}
+  .my-#{$mp}-#{$important} {
+		margin-top: $size !important;
+		margin-bottom: $size !important;
 	}
 
   .ma-#{$mp} {
 		margin: $size;
 	}
 
+  .ma-#{$mp}-#{$important} {
+		margin: $size !important;
+	}
+
   .mx-auto {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+  .mx-auto-#{$important} {
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
 
   .my-auto {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+  .my-auto-#{$important} {
 		margin-top: auto !important;
 		margin-bottom: auto !important;
 	}
 
   .ma-auto {
+		margin: auto;
+	}
+
+  .ma-auto-#{$important} {
 		margin: auto !important;
 	}
 
@@ -143,27 +218,54 @@ $mp-list: 0, 2, 5, 8, 10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 50, 60
 		padding-left: $size;
 		padding-right: $size;
 	}
+  .px-#{$mp}-#{$important} {
+		padding-left: $size !important;
+		padding-right: $size !important;
+	}
 
   .py-#{$mp} {
 		padding-top: $size;
 		padding-bottom: $size;
 	}
 
+  .py-#{$mp}-#{$important} {
+		padding-top: $size !important;
+		padding-bottom: $size !important;
+	}
+
   .pa-#{$mp} {
 		padding: $size;
 	}
 
+  .pa-#{$mp}-#{$important} {
+		padding: $size !important;
+	}
+
   .px-auto {
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+  .px-auto-#{$important} {
 		padding-left: auto !important;
 		padding-right: auto !important;
 	}
 
   .py-auto {
+		padding-top: auto;
+		padding-bottom: auto;
+	}
+
+  .py-auto-#{$important} {
 		padding-top: auto !important;
 		padding-bottom: auto !important;
 	}
 
   .pa-auto {
+		padding: auto;
+	}
+
+  .pa-auto-#{$important} {
 		padding: auto !important;
 	}
 }
@@ -171,34 +273,59 @@ $mp-list: 0, 2, 5, 8, 10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 50, 60
 $width-list: 50, 60, 70, 80, 90, 100, 120, 150, 180, 200, 220, 250, 280, 300, 320, 350, 380, 400, 420, 450, 480, 500, 520, 550, 580, 600, 620, 650, 680, 700, 800, 900, 1000, 1200;
 @each $width in $width-list {
 	.w-#{$width} {
+		width: $width + px;
+	}
+	.w-#{$width}-#{$important} {
 		width: $width + px !important;
 	}
 }
 .width-100-percent {
+	width: 100%;
+}
+.width-100-percent-#{$important} {
 	width: 100% !important;
 }
 .height-100-percent {
+	height: 100%;
+}
+.height-100-percent-#{$important} {
 	height: 100% !important;
 }
 
-$border-radius-list: 0, 3, 5, 8, 10, 12, 15, 18, 20;
+$border-radius-list: 0, 2, 5, 8, 10, 12, 15, 18, 20;
 @each $br in $border-radius-list {
-  $size: $br + px !important;
+  $size: $br + px;
 
   $direction-list: (t, top), (b, bottom), (l, left), (r, right);
 
 	.border-radius-#{$br} {
 		border-radius: $size;
 	}
+
+	.border-radius-#{$br}-#{$important} {
+		border-radius: $size !important;
+	}
   
   @each $direction, $name in $direction-list {
     .border-radius-#{$direction}-#{$br} {
       border-radius-#{$name}: $size;
     }
+    .border-radius-#{$direction}-#{$br}-#{$important} {
+      border-radius-#{$name}: $size !important;
+    }
   }
 }
 .border-radius-50 {
+  border-radius: 50%;
+}
+.border-radius-50-#{$important} {
   border-radius: 50% !important;
+}
+.border-0 {
+  border: 0;
+}
+.border-0-#{$important} {
+  border: 0 !important;
 }
 
 /*
@@ -207,6 +334,9 @@ $border-radius-list: 0, 3, 5, 8, 10, 12, 15, 18, 20;
 $float-list: left, right, start, end, none;
 @each $float in $float-list {
   .float-#{$float} {
+    float: $float;
+  }
+  .float-#{$float}-#{$important} {
     float: $float !important;
   }
 }
@@ -217,6 +347,9 @@ $float-list: left, right, start, end, none;
 $font-s-list: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30;
 @each $fs in $font-s-list {
 	.font-s-#{$fs} {
+		font-size: $fs + px;
+	}
+	.font-s-#{$fs}-#{$important} {
 		font-size: $fs + px !important;
 	}
 }
@@ -224,6 +357,9 @@ $font-s-list: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30;
 $font-w-list: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 @each $fw in $font-w-list {
 	.font-w-#{$fw} {
+		font-weight: $fw;
+	}
+	.font-w-#{$fw}-#{$important} {
 		font-weight: $fw !important;
 	}
 }
@@ -231,12 +367,20 @@ $font-w-list: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 $text-align-list: left, right, center;
 @each $ta in $text-align-list {
 	.text-#{$ta} {
+		text-align: $ta;
+	}
+	.text-#{$ta}-#{$important} {
 		text-align: $ta !important;
 	}
 }
 
 // 单行超出省略
 .text-ellipsis-1 {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.text-ellipsis-1-#{$important} {
   overflow: hidden !important;
   text-overflow:ellipsis !important;
   white-space: nowrap !important;
@@ -245,6 +389,13 @@ $text-align-list: left, right, center;
 $text-ellipsis-list: 2, 3, 4, 5, 8, 10;
 @each $te in $text-ellipsis-list {
 	.text-ellipsis-#{$te} {
+		text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $te;
+    overflow: hidden;
+	}
+	.text-ellipsis-#{$te}-#{$important} {
 		text-overflow: ellipsis !important;
     display: -webkit-box !important;
     -webkit-box-orient: vertical !important;
@@ -255,18 +406,33 @@ $text-ellipsis-list: 2, 3, 4, 5, 8, 10;
 
 // 英文或数字也换行
 .word-wrap-break-all {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.word-wrap-break-all-#{$important} {
   word-wrap: break-word !important;
   word-break: break-all !important;
 }
 
 // 英文或数字不换行
 .word-wrap-break-word {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.word-wrap-break-word-#{$important} {
   word-wrap: break-word !important;
   word-break: break-word !important;
 }
 
 // 禁止选中文本
 .select-disabled {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.select-disabled-#{$important} {
   -moz-user-select: none !important;
   -webkit-user-select: none !important;
   -ms-user-select: none !important;
